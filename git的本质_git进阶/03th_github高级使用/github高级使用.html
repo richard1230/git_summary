@@ -1,0 +1,518 @@
+﻿<!DOCTYPE HTML><html><head><style id="wiz_custom_css">html, .wiz-editor-body {font-size: 12pt;}.wiz-editor-body {font-family: Helvetica, "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei UI", SimSun, SimHei, arial, sans-serif;line-height: 1.7;margin: 0 auto;position:relative;padding: 20px 16px;padding: 1.25rem 1rem;}.wiz-editor-body h1,.wiz-editor-body h2,.wiz-editor-body h3,.wiz-editor-body h4,.wiz-editor-body h5,.wiz-editor-body h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}.wiz-editor-body h1 {font-size:20pt;font-size:1.67rem;}.wiz-editor-body h2 {font-size:18pt;font-size:1.5rem;}.wiz-editor-body h3 {font-size:15pt;font-size:1.25rem;}.wiz-editor-body h4 {font-size:14pt;font-size:1.17rem;}.wiz-editor-body h5 {font-size:12pt;font-size:1rem;}.wiz-editor-body h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}.wiz-editor-body div,.wiz-editor-body p,.wiz-editor-body ul,.wiz-editor-body ol,.wiz-editor-body dl,.wiz-editor-body li {margin:8px 0;}.wiz-editor-body blockquote,.wiz-editor-body table,.wiz-editor-body pre,.wiz-editor-body code {margin:8px 0;}.wiz-editor-body .CodeMirror pre {margin:0;}.wiz-editor-body a {word-wrap: break-word;text-decoration-skip-ink: none;}.wiz-editor-body ul,.wiz-editor-body ol {padding-left:32px;padding-left:2rem;}.wiz-editor-body ol.wiz-list-level1 > li {list-style-type:decimal;}.wiz-editor-body ol.wiz-list-level2 > li {list-style-type:lower-latin;}.wiz-editor-body ol.wiz-list-level3 > li {list-style-type:lower-roman;}.wiz-editor-body li.wiz-list-align-style {list-style-position: inside; margin-left: -1em;}.wiz-editor-body blockquote {padding: 0 12px;}.wiz-editor-body blockquote > :first-child {margin-top:0;}.wiz-editor-body blockquote > :last-child {margin-bottom:0;}.wiz-editor-body img {border:0;max-width:100%;height:auto !important;margin:2px 0;}.wiz-editor-body table {border-collapse:collapse;border:1px solid #bbbbbb;}.wiz-editor-body td,.wiz-editor-body th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-word;box-sizing: border-box;}.wiz-editor-body td > div:first-child {margin-top:0;}.wiz-editor-body td > div:last-child {margin-bottom:0;}.wiz-editor-body img.wiz-svg-image {box-shadow:1px 1px 4px #E8E8E8;}.wiz-hide {display:none !important;}
+html, .wiz-editor-body {
+  font-family:'Helvetica Neue';
+  font-size:15px;
+  background-color:#FFFFFF;
+  line-height:1.7;
+} 
+body.wiz-editor-body div, body.wiz-editor-body p, body.wiz-editor-body ul, body.wiz-editor-body ol, body.wiz-editor-body dl, body.wiz-editor-body li {
+  margin-top:8px; margin-bottom:8px
+}</style><link rel="stylesheet" charset="utf-8" name="wiz_tmp_editor_style" href="/Applications/WizNote 3.app/Contents/Resources/files/wizeditor/dependency/fonts.css?v=1.0.40" id="wiz_/Applications/WizNote 3.app/Contents/Resources/files/wizeditor/dependency/fonts.css?v=1.0.40"><style name="wiz_tmp_editor_style" id="wiz_tmp_style_editor_common">html {height:100%;} body, .wiz-editor-body {-webkit-tap-highlight-color:rgba(255,255,255,0);}.wiz-editor-body {min-height:100%;box-sizing:border-box;word-wrap: break-word !important;outline:none;}.wiz-editor-body img::selection {background-color: rgba(0, 0, 255, 0.3);}.wiz-editor-body input:disabled, .wiz-editor-body textarea:disabled {opacity: 1;}a {cursor:pointer;}::-ms-clear,::-ms-reveal{display:none;}wiz_tmp_tag {line-height: 1.7;}.wiz-editor-body .wiz-table-container {border:0px !important;}.wiz-editor-body .wiz-table-body {border:0px !important;position:relative;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;outline:none;}.wiz-editor-body .wiz-table-body table {margin:0;outline:none;}.wiz-editor-body td,.wiz-editor-body th {outline:none;}.wiz-editor-body .wiz-select-plugin-container {position:relative;display:inline-block;width:160px;height:28px;border-radius:4px;padding:0;margin-left:5px;cursor:pointer;}.wiz-editor-body .wiz-select-plugin-container.more {width:28px;}.wiz-editor-body .wiz-select-plugin-container, .wiz-editor-body .wiz-select-plugin-options {box-sizing:border-box;background:white;border:1px solid #e7e7e7;color:#333;box-shadow: 1px 1px 5px #d0d0d0;}.wiz-editor-body .wiz-select-plugin-header {line-height:28px;font-size:14px;padding: 0 0 0 5px;overflow:hidden;margin-right:27px;white-space:nowrap;}.wiz-editor-body .wiz-select-plugin-header i {position:absolute;top:0;right:0;line-height:26px;padding:0;text-align:center;min-width:27px;border-left:1px solid #e7e7e7;box-sizing:border-box;}.wiz-editor-body .wiz-select-plugin-header i.icon-more {font-size:16px;border:0;width:100%;height:100%}.wiz-editor-body .wiz-select-plugin-options {display:none;background:white;list-style:none;padding:0;margin:0;white-space:nowrap;max-height:200px;min-width:160px;max-width:260px;overflow-x:hidden;overflow-y:auto;position:absolute;top:30px;right:-1px;}.wiz-editor-body .wiz-select-plugin-options-item {font-size:14px;padding:2px 20px;line-height:normal;margin-top: 8px !important;}.wiz-editor-body .wiz-select-plugin-options-item.disabled {font-size:12px; color:#aaaaaa;}.wiz-editor-body .wiz-select-plugin-options-item.selected {background:#448aff;color:white;}.wiz-editor-body .wiz-select-plugin-options-item:hover {background:#448aff !important;color:white !important;}.wiz-editor-body .wiz-select-plugin-options-item .icon-checkmark {visibility: hidden}.wiz-editor-body .wiz-select-plugin-options-item .icon-checkmark.active {visibility: visible}.wiz-editor-body .wiz-select-plugin-container.active .wiz-select-plugin-options {display:block;}.wiz-editor-body .wiz-code-container-paste textarea {visibility: hidden;}.wiz-img-resize-handle {position: absolute;z-index: 1000;border: 1px solid black;background-color: white;}.wiz-img-resize-handle {width:5px;height:5px;margin:0 !important;}.wiz-img-resize-handle.lt {cursor: nw-resize;}.wiz-img-resize-handle.tm {cursor: n-resize;}.wiz-img-resize-handle.rt {cursor: ne-resize;}.wiz-img-resize-handle.lm {cursor: w-resize;}.wiz-img-resize-handle.rm {cursor: e-resize;}.wiz-img-resize-handle.lb {cursor: sw-resize;}.wiz-img-resize-handle.bm {cursor: s-resize;}.wiz-img-resize-handle.rb {cursor: se-resize;}.wiz-editor-body .wiz-tooltip i.editor-icon {top:0;}.wiz-editor-body .wiz-tooltip {margin: 0;position: absolute;display: none;min-width: 125px;padding: 5px 0;background: #fff;border-radius: 3px;border: 1px solid #E0E0E0;top:28px;left:-9px;box-shadow: 1px 1px 5px #d0d0d0;max-width: none;}.wiz-editor-body .wiz-tooltip.active {display:block;}.wiz-editor-body .wiz-tooltip > div {font-size:15px;min-width:63px;}.wiz-editor-body .wiz-tooltip div {margin:0;}.wiz-editor-body .wiz-tooltip .wiz-tooltip-arrow-bg,.wiz-editor-body .wiz-tooltip .wiz-tooltip-arrow {position: absolute;border-style: solid;border-color: transparent;border-bottom-color: #cccccc;left: 22px;margin-left: -14px;top: -8px;border-width: 0 8px 8px 8px;z-index:10;}.wiz-editor-body .wiz-tooltip .wiz-tooltip-arrow {border-bottom-color: #ffffff;top: -7px;}.wiz-editor-body .wiz-tooltip.top .wiz-tooltip-arrow-bg {top: auto;bottom: -8px;transform:rotate(180deg);}.wiz-editor-body .wiz-tooltip.top .wiz-tooltip-arrow {top: auto;bottom: -7px;transform:rotate(180deg);}.wiz-editor-body .wiz-tooltip-item {margin:0;padding: 4px 12px;font-size: 14px;}.wiz-editor-body .wiz-tooltip-item.split {border-top: 1px solid #E0E0E0;}.wiz-editor-body .wiz-tooltip-item:hover {background-color: #ececec;}.wiz-editor-body .wiz-tooltip-item.disabled {color: #bbbbbb;cursor: default;}.wiz-editor-body .wiz-tooltip-item.disabled:hover {background-color: transparent;}.wiz-editing .wiz-table-body.wiz-table-moving *, .wiz-editing .wiz-table-body.wiz-table-moving *:before, .wiz-editing .wiz-table-body.wiz-table-moving *:after {cursor:default !important;} .wiz-editing.wiz-editor-body td, .wiz-editing.wiz-editor-body th {position:relative;}#wiz-table-range-border {display: none;width: 0;height: 0;position: absolute;top: 0;left: 0; z-index:105}#wiz-table-col-line, #wiz-table-row-line {margin:0;display: none;background-color: #448aff;position: absolute;z-index:120;}#wiz-table-col-line {width: 1px;cursor:col-resize;}#wiz-table-row-line {height: 1px;cursor:row-resize;}#wiz-table-range-border_start, #wiz-table-range-border_range {display: none;width: 0;height: 0;margin: 0;position: absolute;}#wiz-table-range-border_start div, #wiz-table-range-border_range div {margin: 0;}#wiz-table-range-border_start_top, #wiz-table-range-border_range_top {height: 2px;background-color: #448aff;position: absolute;top: 0;left: 0;}#wiz-table-range-border_range_top {height: 1px;}#wiz-table-range-border_start_right, #wiz-table-range-border_range_right {width: 2px;background-color: #448aff;position: absolute;top: 0;}#wiz-table-range-border_range_right {width: 1px;}#wiz-table-range-border_start_bottom, #wiz-table-range-border_range_bottom {height: 2px;background-color: #448aff;position: absolute;top: 0;}#wiz-table-range-border_range_bottom {height: 1px;}#wiz-table-range-border_start_left, #wiz-table-range-border_range_left {width: 2px;background-color: #448aff;position: absolute;top: 0;left: 0;}#wiz-table-range-border_range_left {width: 1px;}#wiz-table-range-border_start_dot, #wiz-table-range-border_range_dot {width: 5px;height: 5px;border: 2px solid rgb(255, 255, 255);background-color: #448aff;cursor: crosshair;position: absolute;z-index:110;}.wiz-table-tools {display: block;background-color:#fff;position: absolute;left: 0px;border: 1px solid #ddd;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;z-index:130;}.wiz-table-tools ul {margin:0 !important;}.wiz-table-tools ul {list-style: none !important;padding: 0;width:auto;}.wiz-table-tools .wiz-table-menu-item {position: relative;float: left;margin:4px 2px 2px 8px;clear: initial;text-align: left;}.wiz-table-tools .wiz-table-menu-item .wiz-table-menu-button {margin:0; font-size:15px;width:20px;height:20px;line-height:20px;cursor: pointer;position:relative;}.wiz-table-tools i.editor-icon{font-size: 15px;color: #455a64; position: absolute;top: 1px;left: 0;z-index:1}.wiz-editor-body .wiz-table-menu-item.active .wiz-tooltip {display: block}.wiz-table-tools .wiz-table-menu-item .wiz-table-menu-button i#wiz-menu-bg-demo{position: absolute;top:1px;left:0;}.wiz-table-tools .wiz-table-menu-item.wiz-table-cell-bg:hover .wiz-table-color-pad {display: block;}.wiz-table-tools .wiz-table-color-pad {display: none;padding: 10px;box-sizing: border-box;min-width: 85px;height: 88px;background-color: #fff;cursor: default;}.wiz-table-tools .wiz-table-color-pad > div{font-size:15px;}.wiz-table-tools .wiz-table-color-pad .wiz-table-color-pad-item {display: inline-block;width: 15px;height: 15px;margin-right: 9px;position: relative;}.wiz-table-tools .wiz-table-color-pad .wiz-table-color-pad-item .icon-oblique_line{color: #cc0000;}.wiz-table-tools .wiz-table-color-pad .wiz-table-color-pad-item:last-child {margin-right: 0;}.wiz-table-tools .wiz-table-color-pad .wiz-table-color-pad-item.active i.editor-icon.icon-box {color: #448aff;}.wiz-table-tools .wiz-table-cell-align {display: none;padding: 10px;box-sizing: border-box;min-width: 85px;height: 65px;background-color: #fff;cursor: default;}.wiz-table-tools .wiz-table-cell-align .wiz-table-cell-align-item {display: inline-block;width: 15px;height: 15px;margin-right: 9px;position: relative;}.wiz-table-tools .wiz-table-cell-align .wiz-table-cell-align-item[data-align-type=align] {margin-right:8px}.wiz-table-tools .wiz-table-cell-align .wiz-table-cell-align-item:last-child {margin-right:0}.wiz-table-tools .wiz-table-cell-align .wiz-table-cell-align-item i.valign{color: #d2d2d2;}.wiz-table-tools .wiz-table-cell-align-item i.editor-icon.align {font-size:17px;}.wiz-table-tools .wiz-table-cell-align-item.active i.editor-icon.valign {color: #a1c4ff;}.wiz-table-tools .wiz-table-cell-align-item.active i.editor-icon.icon-box,.wiz-table-tools .wiz-table-cell-align-item.active i.editor-icon.align {color: #448aff;}.wiz-table-tools .wiz-table-color-pad .wiz-table-color-pad-item:last-child,.wiz-table-tools .wiz-table-cell-align .wiz-table-cell-align-item:last-child {margin-right: 0;}.wiz-editing.wiz-editor-body th.wiz-selected-cell-multi,.wiz-editing.wiz-editor-body td.wiz-selected-cell-multi {background: rgba(0,102,255,.05);}.wiz-editing.wiz-editor-body th:before,.wiz-editing.wiz-editor-body td:before,#wiz-table-col-line:before,#wiz-table-range-border_start_right:before,#wiz-table-range-border_range_right:before {content: " ";position: absolute;top: 0;bottom: 0;right: -5px;width: 9px;cursor: col-resize;background: transparent;z-index:100;}.wiz-editing.wiz-editor-body th:after,.wiz-editing.wiz-editor-body td:after,#wiz-table-row-line:before,#wiz-table-range-border_start_bottom:before,#wiz-table-range-border_range_bottom:before {content: " ";position: absolute;left: 0;right: 0;bottom: -5px;height: 9px;cursor: row-resize;background: transparent;z-index:100;}</style><style name="wiz_tmp_editor_style" id="wiz_tmp_style_editor_block_scroll">.wiz-block-scroll::-webkit-scrollbar {width: 7px;height: 7px;}.wiz-block-scroll::-webkit-scrollbar-thumb {background-color: #7f7f7f;border-radius: 7px;}.wiz-block-scroll::-webkit-scrollbar-button {display: none;}</style><style name="wiz_tmp_editor_style" id="wiz-tmp-bottom-style">.wiz-editing.wiz-editor-body {margin-bottom: 99px;}</style><style name="wiz_tmp_editor_style" id="wiz_tmp_style_reader_common">html {height:100%;} body, .wiz-editor-body {-webkit-tap-highlight-color:rgba(255,255,255,0);}.wiz-editor-body {min-height:100%;box-sizing:border-box;word-wrap: break-word !important;outline:none;}.wiz-editor-body img::selection {background-color: rgba(0, 0, 255, 0.3);}.wiz-editor-body input:disabled, .wiz-editor-body textarea:disabled {opacity: 1;}a {cursor:pointer;}::-ms-clear,::-ms-reveal{display:none;}wiz_tmp_tag {line-height: 1.7;}.wiz-editor-body .wiz-table-container {border:0px !important;}.wiz-editor-body .wiz-table-body {border:0px !important;position:relative;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;outline:none;}.wiz-editor-body .wiz-table-body table {margin:0;outline:none;}.wiz-editor-body td,.wiz-editor-body th {outline:none;}.wiz-editor-body .wiz-select-plugin-container {position:relative;display:inline-block;width:160px;height:28px;border-radius:4px;padding:0;margin-left:5px;cursor:pointer;}.wiz-editor-body .wiz-select-plugin-container.more {width:28px;}.wiz-editor-body .wiz-select-plugin-container, .wiz-editor-body .wiz-select-plugin-options {box-sizing:border-box;background:white;border:1px solid #e7e7e7;color:#333;box-shadow: 1px 1px 5px #d0d0d0;}.wiz-editor-body .wiz-select-plugin-header {line-height:28px;font-size:14px;padding: 0 0 0 5px;overflow:hidden;margin-right:27px;white-space:nowrap;}.wiz-editor-body .wiz-select-plugin-header i {position:absolute;top:0;right:0;line-height:26px;padding:0;text-align:center;min-width:27px;border-left:1px solid #e7e7e7;box-sizing:border-box;}.wiz-editor-body .wiz-select-plugin-header i.icon-more {font-size:16px;border:0;width:100%;height:100%}.wiz-editor-body .wiz-select-plugin-options {display:none;background:white;list-style:none;padding:0;margin:0;white-space:nowrap;max-height:200px;min-width:160px;max-width:260px;overflow-x:hidden;overflow-y:auto;position:absolute;top:30px;right:-1px;}.wiz-editor-body .wiz-select-plugin-options-item {font-size:14px;padding:2px 20px;line-height:normal;margin-top: 8px !important;}.wiz-editor-body .wiz-select-plugin-options-item.disabled {font-size:12px; color:#aaaaaa;}.wiz-editor-body .wiz-select-plugin-options-item.selected {background:#448aff;color:white;}.wiz-editor-body .wiz-select-plugin-options-item:hover {background:#448aff !important;color:white !important;}.wiz-editor-body .wiz-select-plugin-options-item .icon-checkmark {visibility: hidden}.wiz-editor-body .wiz-select-plugin-options-item .icon-checkmark.active {visibility: visible}.wiz-editor-body .wiz-select-plugin-container.active .wiz-select-plugin-options {display:block;}</style><style name="wiz_tmp_editor_style" id="wiz_tmp_style_reader_block_scroll">.wiz-block-scroll::-webkit-scrollbar {width: 7px;height: 7px;}.wiz-block-scroll::-webkit-scrollbar-thumb {background-color: #7f7f7f;border-radius: 7px;}.wiz-block-scroll::-webkit-scrollbar-button {display: none;}</style><link rel="stylesheet" charset="utf-8" name="wiz_tmp_editor_style" href="/Applications/WizNote 3.app/Contents/Resources/files/wizeditor/dependency/github2.css?v=1.0.40" id="wiz_/Applications/WizNote 3.app/Contents/Resources/files/wizeditor/dependency/github2.css?v=1.0.40"><link rel="stylesheet" charset="utf-8" name="wiz_tmp_editor_style" href="/Applications/WizNote 3.app/Contents/Resources/files/wizeditor/dependency/wizToc.css?v=1.0.40" id="wiz_/Applications/WizNote 3.app/Contents/Resources/files/wizeditor/dependency/wizToc.css?v=1.0.40"><style id="wiz_code_style">.wiz-editor-body .wiz-code-container{position: relative; padding:8px 0; margin: 5px 0;text-indent:0; text-align:left;}.CodeMirror {font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; color: black; font-size: 10.5pt; font-size: 0.875rem}.wiz-editor-body .wiz-code-container .CodeMirror div {margin-top: 0; margin-bottom: 0;}.CodeMirror-lines {padding: 4px 0;}.CodeMirror pre {padding: 0 4px;}.CodeMirror pre.CodeMirror-line {min-height: 24px;}.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {background-color: white;}.CodeMirror-gutters {border-right: 1px solid #ddd; background-color: #f7f7f7; white-space: nowrap;}.CodeMirror-linenumbers {}.CodeMirror-linenumber {padding: 0 3px 0 5px; min-width: 20px; text-align: right; color: #999; white-space: nowrap;}.CodeMirror-guttermarker {color: black;}.CodeMirror-guttermarker-subtle {color: #999;}.CodeMirror-cursor {border-left: 1px solid black; border-right: none; width: 0;}.CodeMirror div.CodeMirror-secondarycursor {border-left: 1px solid silver;}.cm-fat-cursor .CodeMirror-cursor {width: auto; border: 0 !important; background: #7e7;}.cm-fat-cursor div.CodeMirror-cursors {z-index: 1;}.cm-fat-cursor-mark {background-color: rgba(20, 255, 20, 0.5);-webkit-animation: blink 1.06s steps(1) infinite;-moz-animation: blink 1.06s steps(1) infinite;animation: blink 1.06s steps(1) infinite;}.cm-animate-fat-cursor {width: auto; border: 0; -webkit-animation: blink 1.06s steps(1) infinite; -moz-animation: blink 1.06s steps(1) infinite; animation: blink 1.06s steps(1) infinite; background-color: #7e7;}@-moz-keyframes blink {  0% {}  50% { background-color: transparent; }  100% {}}@-webkit-keyframes blink {  0% {}  50% { background-color: transparent; }  100% {}}@keyframes blink {  0% {}  50% { background-color: transparent; }  100% {}}.CodeMirror-overwrite .CodeMirror-cursor {}.cm-tab { display: inline-block; text-decoration: inherit; }.CodeMirror-rulers {position: absolute; left: 0; right: 0; top: -50px; bottom: -20px; overflow: hidden;}.CodeMirror-ruler {border-left: 1px solid #ccc; top: 0; bottom: 0; position: absolute;}.cm-s-default .cm-header {color: blue;}.cm-s-default .cm-quote {color: #090;}.cm-negative {color: #d44;}.cm-positive {color: #292;}.cm-header, .cm-strong {font-weight: bold;}.cm-em {font-style: italic;}.cm-link {text-decoration: underline;}.cm-strikethrough {text-decoration: line-through;}.cm-s-default .cm-keyword {color: #708;}.cm-s-default .cm-atom {color: #219;}.cm-s-default .cm-number {color: #164;}.cm-s-default .cm-def {color: #00f;}.cm-s-default .cm-variable,.cm-s-default .cm-punctuation,.cm-s-default .cm-property,.cm-s-default .cm-operator {}.cm-s-default .cm-variable-2 {color: #05a;}.cm-s-default .cm-variable-3 {color: #085;}.cm-s-default .cm-comment {color: #a50;}.cm-s-default .cm-string {color: #a11;}.cm-s-default .cm-string-2 {color: #f50;}.cm-s-default .cm-meta {color: #555;}.cm-s-default .cm-qualifier {color: #555;}.cm-s-default .cm-builtin {color: #30a;}.cm-s-default .cm-bracket {color: #997;}.cm-s-default .cm-tag {color: #170;}.cm-s-default .cm-attribute {color: #00c;}.cm-s-default .cm-hr {color: #999;}.cm-s-default .cm-link {color: #00c;}.cm-s-default .cm-error {color: #f00;}.cm-invalidchar {color: #f00;}.CodeMirror-composing { border-bottom: 2px solid; }div.CodeMirror span.CodeMirror-matchingbracket {color: #0b0;}div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}.CodeMirror-matchingtag { background: rgba(255, 150, 0, .3); }.CodeMirror-activeline-background {background: #e8f2ff;}.CodeMirror {position: relative; background: #f5f5f5;}.CodeMirror-scroll {overflow: hidden !important; margin-bottom: 0; margin-right: -30px; padding: 16px 30px 16px 0; outline: none; position: relative;}.CodeMirror-sizer {position: relative; border-right: 30px solid transparent;}.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {position: absolute; z-index: 6; display: none;}.CodeMirror-vscrollbar {right: 0; top: 0; overflow-x: hidden; overflow-y: scroll;}.CodeMirror-hscrollbar {bottom: 0; left: 0 !important; overflow-y: hidden; overflow-x: scroll;pointer-events: auto !important;outline: none;}.CodeMirror-scrollbar-filler {right: 0; bottom: 0;}.CodeMirror-gutter-filler {left: 0; bottom: 0;}.CodeMirror-gutters {position: absolute; left: 0; top: 0; min-height: 100%; z-index: 3;}.CodeMirror-gutter {white-space: normal; height: 100%; display: inline-block; vertical-align: top; margin-bottom: -30px;}.CodeMirror-gutter-wrapper {position: absolute; z-index: 4; background: none !important; border: none !important;}.CodeMirror-gutter-background {position: absolute; top: 0; bottom: 0; z-index: 4;}.CodeMirror-gutter-elt {position: absolute; cursor: default; z-index: 4;}.CodeMirror-gutter-wrapper ::selection { background-color: transparent }.CodeMirror-gutter-wrapper ::-moz-selection { background-color: transparent }.CodeMirror-lines {cursor: text; min-height: 1px;}.CodeMirror pre {-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; border-width: 0; background: transparent; font-family: inherit; font-size: inherit; margin: 0; white-space: pre; word-wrap: normal; line-height: inherit; color: inherit; z-index: 2; position: relative; overflow: visible; -webkit-tap-highlight-color: transparent; -webkit-font-variant-ligatures: contextual; font-variant-ligatures: contextual;}.CodeMirror-wrap pre {word-wrap: break-word; white-space: pre-wrap; word-break: normal;}.CodeMirror-linebackground {position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 0;}.CodeMirror-linewidget {position: relative; z-index: 2; padding: 0.1px;}.CodeMirror-widget {}.CodeMirror-rtl pre { direction: rtl; }.CodeMirror-code {outline: none;}.CodeMirror-scroll,.CodeMirror-sizer,.CodeMirror-gutter,.CodeMirror-gutters,.CodeMirror-linenumber {-moz-box-sizing: content-box; box-sizing: content-box;}.CodeMirror-measure {position: absolute; width: 100%; height: 0; overflow: hidden; visibility: hidden;}.CodeMirror-cursor {position: absolute; pointer-events: none;}.CodeMirror-measure pre { position: static; }div.CodeMirror-cursors {visibility: hidden; position: relative; z-index: 3;}div.CodeMirror-dragcursors {visibility: visible;}.CodeMirror-focused div.CodeMirror-cursors {visibility: visible;}.CodeMirror-selected { background: #d9d9d9; }.CodeMirror-focused .CodeMirror-selected { background: #d7d4f0; }.CodeMirror-crosshair { cursor: crosshair; }.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection { background: #d7d4f0; }.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection { background: #d7d4f0; }.cm-searching {background: #ffa; background: rgba(255, 255, 0, .4);}.cm-force-border { padding-right: .1px; }@media print {  .CodeMirror div.CodeMirror-cursors {visibility: hidden;}}.cm-tab-wrap-hack:after { content: ""; }span.CodeMirror-selectedtext { background: none; }.CodeMirror-activeline-background, .CodeMirror-selected {transition: visibility 0ms 100ms;}.CodeMirror-blur .CodeMirror-activeline-background, .CodeMirror-blur .CodeMirror-selected {visibility:hidden;}.CodeMirror-blur .CodeMirror-matchingbracket {color:inherit !important;outline:none !important;text-decoration:none !important;}.CodeMirror-sizer {min-height:auto !important;}</style><style name="wiz_tmp_editor_style" id="wiz_tmp_style_code_common">.wiz-code-tools {display:none; align-items: center;position: absolute; top: -32px; right: 0; opacity: .95; z-index: 110;}.wiz-editor-body .wiz-code-container .wiz-code-tools {opacity:0;display:flex;transition: opacity 500ms;}.wiz-editor-body .wiz-code-container:hover .wiz-code-tools {opacity:1; }.wiz-editing .CodeMirror-show-tools .wiz-code-tools {z-index: 220;}.wiz-readonly .wiz-code-tools.mobile,.wiz-editing .CodeMirror-show-tools .wiz-code-tools,.wiz-editing .CodeMirror-focused .wiz-code-tools {opacity:1; display: flex;}.CodeMirror-sizer {border-right: 0 !important;}.wiz-editor-body pre.prettyprint {padding:0;}.wiz-editor-body pre.prettyprint code {white-space: pre-wrap;}.wiz-editor-body pre.prettyprint.linenums {box-shadow:none; overflow: auto;-webkit-overflow-scrolling: touch;}.wiz-editor-body pre.prettyprint.linenums ol.linenums {box-shadow: 40px 0 0 #FBFBFC inset, 41px 0 0 #ECECF0 inset; padding: 10px 10px 10px 40px !important;}.wiz-editing .CodeMirror-activeline-background {display: none;}.wiz-editing .CodeMirror-focused .CodeMirror-activeline-background {display: block;}</style><style name="wiz_tmp_editor_style" id="wiz_tmp_style_code_reader">.wiz-readonly .CodeMirror-cursors {visibility: hidden !important;}</style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head><body class="wiz-editor-body wiz-readonly markdown-body" spellcheck="false" contenteditable="false" style="opacity: 1;"><div id="MathJax_Message" style="display: none;"></div><p><div class="wiz_toc_layer"><a class="wiz_toc h2" href="#前言">前言</a><br><a class="wiz_toc h2" href="#基本协作方式">基本协作方式</a><br><a class="wiz_toc h3" href="#仓库的相关补充以及理解全量编译增量编译重要知识点">仓库的相关补充以及理解全量编译增量编译(重要知识点)</a><br><a class="wiz_toc h2" href="#github基本结构术语和导航">github基本结构术语和导航</a><br><a class="wiz_toc h3" href="#在github中导航">在github中导航</a><br><a class="wiz_toc h2" href="#在github里面检索代码有点意思,可以告诉你现成的轮子,怎么抄代码!!!怎么实现需求">在github里面检索代码(有点意思,可以告诉你现成的轮子,怎么抄代码!!!怎么实现需求)</a><br><a class="wiz_toc h2" href="#如何从源代码构建出软件">如何从源代码构建出软件</a><br><a class="wiz_toc h1" href="#通过github解决调试中源代码不匹配问题">通过github解决调试中源代码不匹配问题</a><br><a class="wiz_toc h3" href="#下面需要引入正确的代码了!!重点">下面需要引入正确的代码了!!(重点)</a><br><a class="wiz_toc h1" href="#查找任意感兴趣的代码重要">查找任意感兴趣的代码(重要)</a><br><a class="wiz_toc h2" href="#看前面的一个例子:">看前面的一个例子:</a><br><a class="wiz_toc h3" href="#看到的每一个异常类都可以在github上面找到源代码:">看到的每一个异常类都可以在github上面找到源代码:</a><br><a class="wiz_toc h3" href="#要想知道下面这个类是哪儿来？看下面:">要想知道下面这个类是哪儿来？看下面:</a><br><a class="wiz_toc h3" href="#想要调试直接丢出来的一个异常">想要调试直接丢出来 的一个异常</a><br><a class="wiz_toc h2" href="#小结上面的两个例子调试逻辑总结">小结(上面的两个例子调试逻辑总结)</a><br><a class="wiz_toc h2" href="#确定jvm里面运行的任何代码的正确版本">确定jvm里面运行的任何代码的正确版本</a><br><a class="wiz_toc h3" href="#方案1来了:">方案1来了:</a><br><a class="wiz_toc h3" href="#方案2:">方案2:</a><br><a class="wiz_toc h1" href="#在包冲突时检索正确版本的代码">在包冲突时检索正确版本的代码</a></div><a href="#wizToc" style="display: none;">TOC</a></p>
+
+<h2 id="前言">前言</h2>
+
+<p>GitHub的基本结构 <br>
+在GitHub中导航 <br>
+按照分支、提交以及tag进行检索 <br>
+GitHub资源定位链接 <br>
+Raw data <br>
+包含行号的链接 <br>
+查看Raw文件 <br>
+查看历史 <br>
+使用GitHub进行在线git操作 <br>
+在Web UI上提交代码、建立分支、发起Pull request <br>
+比较两份代码（git diff） <br>
+分支管理 <br>
+merge/rebase/squash and merge <br>
+检索开源项目 <br>
+如何找到自己想要的开源项目 <br>
+如何搜索前人提交过的问题 <br>
+在GitHub中搜索代码、提交、文档</p>
+
+<h2 id="基本协作方式">基本协作方式</h2>
+
+<p><img src="github高级使用_files/807763.png"></p>
+
+<p>正常fork后的仓库,如果不做相关设置的话会与源仓库渐行渐远; <br>
+<img src="github高级使用_files/1131419.png"> <br>
+<img src="github高级使用_files/1731359.png"> <br>
+先fork一份到本地,而后clone到本地: <br>
+要想使得本地和上游的远程同步:</p>
+
+<div id="wiz_cm_1590744610732_8313" class="wiz-code-container" contenteditable="false" data-mode="JavaScript" data-theme="default"><textarea readonly="" style="display:none;">#注意:从远程clone以后,一般本地仓库有两份仓库,即:本地仓库(master)和本地远程仓库(origin/master);但是这里本地远程还有一个仓库,是upstream！！！
+git remote add upstream git@源仓库
+git remote
+git fetch git@源仓库
+git merge upstream/master
+##或者用下面这一步代替上面两步
+Git pull upstream/master</textarea><wiz_code_mirror><div class="CodeMirror cm-s-default" data-id="wiz_cm_1590744610732_8313"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 20px; left: 34px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0" readonly=""></textarea></div><div class=" wiz-hide wiz_CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class=" wiz-hide wiz_CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="display: block; right: 0px; left: 0px; height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 1006px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: 0px; border-right-width: 30px; min-height: 176px; min-width: 976px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class=" wiz-hide wiz_CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-error">#注意:从远程clone以后,一般本地仓库有两份仓库,即:本地仓库(master)和本地远程仓库(origin/master);但是这里本地远程还有一个仓库,是upstream！！！</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">git</span> <span class="cm-variable">remote</span> <span class="cm-variable">add</span> <span class="cm-variable">upstream</span> <span class="cm-variable">git</span><span class="cm-operator">@</span><span class="cm-variable">源仓库</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">git</span> <span class="cm-variable">remote</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">git</span> <span class="cm-variable">fetch</span> <span class="cm-variable">git</span><span class="cm-operator">@</span><span class="cm-variable">源仓库</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">git</span> <span class="cm-variable">merge</span> <span class="cm-variable">upstream</span><span class="cm-operator">/</span><span class="cm-variable">master</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-error">##或者用下面这一步代替上面两步</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Git</span> <span class="cm-variable">pull</span> <span class="cm-variable">upstream</span><span class="cm-operator">/</span><span class="cm-variable">master</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 176px;"></div><div class="CodeMirror-gutters" style="height: 206px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></wiz_code_mirror></div>
+
+<h3 id="仓库的相关补充以及理解全量编译增量编译重要知识点">仓库的相关补充以及理解全量编译增量编译(重要知识点)</h3>
+
+<p><img src="github高级使用_files/34059211.png"> <br>
+<img src="github高级使用_files/34236938.png"> <br>
+你看的任何一份代码(不管是哪个分支哪个版本,哪个提交)都只是仓库在某个时间点上的快照, <br>
+假如你想知道idea内部是如何工作的,想要去查一个bug,怎么办? <br>
+先将这份代码clone下来,clone到本地,而后可以打包出一份新的idea, <br>
+我们日常所用的任何软件,都是从某份代码的快照所生成的(打包成的)!!! <br>
+日常所用的所有软件(代码),都是通过编译生成的; <br>
+<img src="github高级使用_files/34638329.png"> <br>
+假如你想要3.5.4版本的maven,你就首先把版本切换到3.5.4,而后把这个版本的代码打个包;而后就会变成你想要的这个版本; <br>
+假如你想魔改一些功能,可以切换到对应版本,将里面的一些功能改掉,而后打包就可以用了!!! <br>
+直接从源代码编译构建出一份完整的软件的话需要很长时间;===&gt;全量编译 <br>
+增量编译:如果你只是改了两行,那么就只有这两行代码的变更会被编译;</p>
+
+<p>如果你在你的代码里面引入了spring 5.2.0.release;(那么这个代码怎么来的?) <br>
+<img src="github高级使用_files/35220085.png"> <br>
+如果你在你的代码里面引入了spring 5.2.0.release;(那么这个代码怎么来的?) <br>
+看下面: <br>
+<img src="github高级使用_files/35272589.png"> </p>
+
+<p>## 从github你能获得什么 <br>
+<img src="github高级使用_files/35381480.png"> <br>
+一般遇到问题,你先在issue里面搜,找不到提issue,不回复,写邮件; <br>
+怎么找邮箱??看下面: <br>
+<img src="github高级使用_files/35560062.png"></p>
+
+<h2 id="github基本结构术语和导航">github基本结构术语和导航</h2>
+
+<p><img src="github高级使用_files/35911916.png"></p>
+
+<h3 id="在github中导航">在github中导航</h3>
+
+<p><img src="github高级使用_files/36161691.png"> <br>
+blame可以查看某一行代码是谁写的: <br>
+<img src="github高级使用_files/36432443.png"></p>
+
+<p>history是可以查看这个文件的所有变更的; <br>
+<img src="github高级使用_files/36556570.png"> <br>
+包含行号的链接:(直接点某一行即可) <br>
+<img src="github高级使用_files/36708909.png"> <br>
+包含多行行号的链接:(自己动手加行号) <br>
+<img src="github高级使用_files/36766318.png"></p>
+
+<p>注意:发链接给别人进行code review的时候最好发利用commit进行检索的链接(此commit永远不会变,而分支之类的会变!) <br>
+分支的状态会随着时间的变化而改变!!</p>
+
+<h2 id="在github里面检索代码有点意思,可以告诉你现成的轮子,怎么抄代码!!!怎么实现需求">在github里面检索代码(有点意思,可以告诉你现成的轮子,怎么抄代码!!!怎么实现需求)</h2>
+
+<p><img src="github高级使用_files/37033007.png"></p>
+
+<p>搜索方法:(在github站内搜索可能效果不如google) <br>
+google:create a function site:stackoverflow.com <br>
+google:create a function site:github.com <br>
+<img src="github高级使用_files/37240461.png"></p>
+
+<p><img src="github高级使用_files/37320508.png">  <br>
+找到了之后怎么用呢? <br>
+除了看文档,还要看测试代码!!!</p>
+
+<h2 id="如何从源代码构建出软件">如何从源代码构建出软件</h2>
+
+<p>没有通用的打包方式!! <br>
+需要看这个仓库的文档！！一般叫contributing.md <br>
+<img src="github高级使用_files/37945898.png"></p>
+
+<p><a href="https://openjdk.java.net/contribute/">https://openjdk.java.net/contribute/</a> : <br>
+<img src="github高级使用_files/38377733.png"></p>
+
+<p><a href="https://hg.openjdk.java.net/jdk/jdk11/raw-file/tip/doc/building.html">https://hg.openjdk.java.net/jdk/jdk11/raw-file/tip/doc/building.html</a></p>
+
+<p><img src="github高级使用_files/38483076.png"></p>
+
+<h1 id="通过github解决调试中源代码不匹配问题">通过github解决调试中源代码不匹配问题</h1>
+
+<p><img src="github高级使用_files/38846087.png"></p>
+
+<p><img src="github高级使用_files/38878281.png"> <br>
+注解怎么发挥作用,取决于处理注解的那个类!! <br>
+要想知道注解什么时候设上值的;只有一种方法,那就是反射!! <br>
+<img src="github高级使用_files/39084883.png"> <br>
+这里需要到Field类里面打条件断点;</p>
+
+<p><img src="github高级使用_files/39262178.png"> <br>
+<img src="github高级使用_files/39280775.png"> <br>
+这个实战的例子在: <br>
+<a href="https://github.com/blindpirate/maven-loc-plugin"></a><a href="https://github.com/blindpirate/maven-loc-plugin">https://github.com/blindpirate/maven-loc-plugin</a> <br>
+先clone一份到本地: <br>
+git@github.com:blindpirate/maven-loc-plugin.git</p>
+
+<div id="wiz_cm_1590744610701_7698" class="wiz-code-container" contenteditable="false" data-mode="JavaScript" data-theme="default"><textarea readonly="" style="display:none;">## 先将当前项目安装到本地
+$mvn install
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------&lt; com.iwhalecloud.common:maven-loc-plugin &gt;---------------
+[INFO] Building Maven LOC Plugin 1.0-SNAPSHOT
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ maven-loc-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/mac/IdeaProjects/maven-loc-plugin/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ maven-loc-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/mac/IdeaProjects/maven-loc-plugin/target/classes
+[INFO] 
+[INFO] --- maven-plugin-plugin:3.2:descriptor (default-descriptor) @ maven-loc-plugin ---</textarea><wiz_code_mirror><div class="CodeMirror cm-s-default" data-id="wiz_cm_1590744610701_7698"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 20px; left: 34px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0" readonly=""></textarea></div><div class=" wiz-hide wiz_CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class=" wiz-hide wiz_CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: 0px; border-right-width: 30px; min-height: 416px; min-width: 812px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class=" wiz-hide wiz_CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-error">## 先将当前项目安装到本地</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">$mvn</span> <span class="cm-variable">install</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">Scanning</span> <span class="cm-keyword">for</span> <span class="cm-variable">projects</span><span class="cm-meta">...</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-operator">--------------&lt;</span> <span class="cm-variable">com</span>.<span class="cm-property">iwhalecloud</span>.<span class="cm-property">common</span>:<span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span> <span class="cm-operator">&gt;---------------</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">Building</span> <span class="cm-variable">Maven</span> <span class="cm-variable">LOC</span> <span class="cm-variable">Plugin</span> <span class="cm-number">1.0</span><span class="cm-operator">-</span><span class="cm-variable">SNAPSHOT</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-operator">----------------------------</span>[ <span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span> ]<span class="cm-operator">----------------------------</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-operator">---</span> <span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">resources</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span>:<span class="cm-number">2.6</span>:<span class="cm-variable">resources</span> (<span class="cm-keyword">default</span><span class="cm-operator">-</span><span class="cm-variable">resources</span>) <span class="cm-operator">@</span> <span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span> <span class="cm-operator">---</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">Using</span> <span class="cm-string">'UTF-8'</span> <span class="cm-variable">encoding</span> <span class="cm-variable">to</span> <span class="cm-variable">copy</span> <span class="cm-variable">filtered</span> <span class="cm-variable">resources</span>.</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">skip</span> <span class="cm-variable">non</span> <span class="cm-variable">existing</span> <span class="cm-variable">resourceDirectory</span> <span class="cm-operator">/</span><span class="cm-variable">Users</span><span class="cm-operator">/</span><span class="cm-variable">mac</span><span class="cm-operator">/</span><span class="cm-variable">IdeaProjects</span><span class="cm-operator">/</span><span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span><span class="cm-operator">/</span><span class="cm-variable">src</span><span class="cm-operator">/</span><span class="cm-variable">main</span><span class="cm-operator">/</span><span class="cm-variable">resources</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-operator">---</span> <span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">compiler</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span>:<span class="cm-number">3.1</span>:<span class="cm-variable">compile</span> (<span class="cm-keyword">default</span><span class="cm-operator">-</span><span class="cm-variable">compile</span>) <span class="cm-operator">@</span> <span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span> <span class="cm-operator">---</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">Changes</span> <span class="cm-variable">detected</span> <span class="cm-operator">-</span> <span class="cm-variable">recompiling</span> <span class="cm-variable">the</span> <span class="cm-variable">module</span><span class="cm-operator">!</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">Compiling</span> <span class="cm-number">2</span> <span class="cm-variable">source</span> <span class="cm-variable">files</span> <span class="cm-variable">to</span> <span class="cm-operator">/</span><span class="cm-variable">Users</span><span class="cm-operator">/</span><span class="cm-variable">mac</span><span class="cm-operator">/</span><span class="cm-variable">IdeaProjects</span><span class="cm-operator">/</span><span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span><span class="cm-operator">/</span><span class="cm-variable">target</span><span class="cm-operator">/</span><span class="cm-variable">classes</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-operator">---</span> <span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span>:<span class="cm-number">3.2</span>:<span class="cm-variable">descriptor</span> (<span class="cm-keyword">default</span><span class="cm-operator">-</span><span class="cm-variable">descriptor</span>) <span class="cm-operator">@</span> <span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span> <span class="cm-operator">---</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 416px;"></div><div class="CodeMirror-gutters" style="height: 446px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></wiz_code_mirror></div>
+
+<p><img src="github高级使用_files/42584596.png"> <br>
+现在就相当于将当前的这个代码(就是为maven写的一个插件)打包成了一份软件</p>
+
+<p><img src="github高级使用_files/42757726.png"> <br>
+其他软件项目也就可以用它了; <br>
+<img src="github高级使用_files/42784896.png"> <br>
+回到正题: <br>
+当jvm里面跑的代码和IDE里面运行的源代码不是同一份代码的时候,就会报上面的源代码与字节码不匹配 的字样!! <br>
+<img src="github高级使用_files/43049368.png"></p>
+
+<p>现在调试一个mvn插件; <br>
+当你任意输入一个mvn命令的时候, mvn会起一个jvm进程;(tomcat,elastic都是启动一个jvm进程) <br>
+IDE既然可以调试自己启动的jvm进程,那也可以调试别人启动的jvm进程; <br>
+因此,只需要在这个进程启动的时候告诉它,可能有人来调试你,不要着急马上就启动!  <br>
+你(mvn)现在以调试模式启动,让ide连上来即可!!!   </p>
+
+<p><img src="github高级使用_files/43281574.png"></p>
+
+<p>下面是以mvn运行这个插件:</p>
+
+<div id="wiz_cm_1590744610668_7301" class="wiz-code-container" contenteditable="false" data-mode="JavaScript" data-theme="default"><textarea readonly="" style="display:none;">$mvn com.iwhalecloud.common:maven-loc-plugin:1.0-SNAPSHOT:loc
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------&lt; com.iwhalecloud.common:maven-loc-plugin &gt;---------------
+[INFO] Building Maven LOC Plugin 1.0-SNAPSHOT
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-loc-plugin:1.0-SNAPSHOT:loc (default-cli) @ maven-loc-plugin ---
+[INFO] basedir: /Users/mac/IdeaProjects/maven-loc-plugin
+[INFO] sourceDirectory: /Users/mac/IdeaProjects/maven-loc-plugin/src/main/java
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.289 s
+[INFO] Finished at: 2020-05-29T12:07:30+08:00
+[INFO] ------------------------------------------------------------------------</textarea><wiz_code_mirror><div class="CodeMirror cm-s-default" data-id="wiz_cm_1590744610668_7301"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 20px; left: 34px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0" readonly=""></textarea></div><div class=" wiz-hide wiz_CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class=" wiz-hide wiz_CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: 0px; border-right-width: 30px; min-height: 392px; min-width: 646.594px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class=" wiz-hide wiz_CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">$mvn</span> <span class="cm-variable">com</span>.<span class="cm-property">iwhalecloud</span>.<span class="cm-property">common</span>:<span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span>:<span class="cm-number">1.0</span><span class="cm-operator">-</span><span class="cm-variable">SNAPSHOT</span>:<span class="cm-variable">loc</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">Scanning</span> <span class="cm-keyword">for</span> <span class="cm-variable">projects</span><span class="cm-meta">...</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-operator">--------------&lt;</span> <span class="cm-variable">com</span>.<span class="cm-property">iwhalecloud</span>.<span class="cm-property">common</span>:<span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span> <span class="cm-operator">&gt;---------------</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">Building</span> <span class="cm-variable">Maven</span> <span class="cm-variable">LOC</span> <span class="cm-variable">Plugin</span> <span class="cm-number">1.0</span><span class="cm-operator">-</span><span class="cm-variable">SNAPSHOT</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-operator">----------------------------</span>[ <span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span> ]<span class="cm-operator">----------------------------</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-operator">---</span> <span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span>:<span class="cm-number">1.0</span><span class="cm-operator">-</span><span class="cm-variable">SNAPSHOT</span>:<span class="cm-variable">loc</span> (<span class="cm-keyword">default</span><span class="cm-operator">-</span><span class="cm-variable">cli</span>) <span class="cm-operator">@</span> <span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span> <span class="cm-operator">---</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">basedir</span>: <span class="cm-string-2">/Users/</span><span class="cm-variable">mac</span><span class="cm-operator">/</span><span class="cm-variable">IdeaProjects</span><span class="cm-operator">/</span><span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">sourceDirectory</span>: <span class="cm-string-2">/Users/</span><span class="cm-variable">mac</span><span class="cm-operator">/</span><span class="cm-variable">IdeaProjects</span><span class="cm-operator">/</span><span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span><span class="cm-operator">/</span><span class="cm-variable">src</span><span class="cm-operator">/</span><span class="cm-variable">main</span><span class="cm-operator">/</span><span class="cm-variable">java</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-operator">------------------------------------------------------------------------</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">BUILD</span> <span class="cm-variable">SUCCESS</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-operator">------------------------------------------------------------------------</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">Total</span> <span class="cm-variable">time</span>: <span class="cm-number">0.289</span> <span class="cm-variable">s</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-variable">Finished</span> <span class="cm-variable">at</span>: <span class="cm-number">2020</span><span class="cm-operator">-</span><span class="cm-number">05</span><span class="cm-operator">-</span><span class="cm-number">29</span><span class="cm-variable">T12</span>:<span class="cm-number">07</span>:<span class="cm-number">30</span><span class="cm-operator">+</span><span class="cm-number">08</span>:<span class="cm-number">00</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">INFO</span>] <span class="cm-operator">------------------------------------------------------------------------</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 392px;"></div><div class="CodeMirror-gutters" style="height: 422px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></wiz_code_mirror></div>
+
+<p>现在以调试器的方式来启动它:(注意,下面这个命令是运行在使用这个插件的项目里面的！！！)</p>
+
+<div id="wiz_cm_1590744610660_593" class="wiz-code-container" contenteditable="false" data-mode="JavaScript" data-theme="default"><textarea readonly="" style="display:none;">$mvnDebug com.iwhalecloud.common:maven-loc-plugin:1.0-SNAPSHOT:loc
+</textarea><wiz_code_mirror><div class="CodeMirror cm-s-default" data-id="wiz_cm_1590744610660_593"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 20px; left: 34px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0" readonly=""></textarea></div><div class=" wiz-hide wiz_CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class=" wiz-hide wiz_CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: 0px; border-right-width: 30px; min-height: 56px; min-width: 528px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class=" wiz-hide wiz_CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">$mvnDebug</span> <span class="cm-variable">com</span>.<span class="cm-property">iwhalecloud</span>.<span class="cm-property">common</span>:<span class="cm-variable">maven</span><span class="cm-operator">-</span><span class="cm-variable">loc</span><span class="cm-operator">-</span><span class="cm-variable">plugin</span>:<span class="cm-number">1.0</span><span class="cm-operator">-</span><span class="cm-variable">SNAPSHOT</span>:<span class="cm-variable">loc</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 56px;"></div><div class="CodeMirror-gutters" style="height: 86px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></wiz_code_mirror></div>
+
+<p><img src="github高级使用_files/43777234.png"> <br>
+<img src="github高级使用_files/59668375.png"></p>
+
+<p>下面注意了:下面这个端口设置是在你自己写的插件(可以理解为依赖库里面)项目里面; <br>
+运行debug也是在你自己写的插件项目里面的！！！ <br>
+<img src="github高级使用_files/43941069.png"></p>
+
+<p><img src="github高级使用_files/44013408.png"></p>
+
+<p><img src="github高级使用_files/44081648.png"></p>
+
+<p>注意:前面是需要在field包里面打断点的:(为什么在set方法这里呢,因为之前的那个问题是想要弄清楚是谁在注解那边设值的!!)</p>
+
+<p><img src="github高级使用_files/44706115.png"></p>
+
+<p><img src="github高级使用_files/44935897.png"> <br>
+断点停了: <br>
+<img src="github高级使用_files/45114243.png"> <br>
+ 出现源代码与字节码不一样了: <br>
+<img src="github高级使用_files/45230457.png"> <br>
+<img src="github高级使用_files/46208186.png"> <br>
+解决方法: <br>
+<img src="github高级使用_files/45350624.png"> <br>
+现在的问题是: <br>
+mvn启动了一个jvm,在jvm里面运行的源代码的字节码和IDE调试的这个源代码匹配不上(虽然他们的全限定类名一样!!) <br>
+IDE只是负责加载这个项目所配置的jar包,而mvn里面加载了什么jar包,ide是不知道的!! <br>
+<img src="github高级使用_files/45537568.png"></p>
+
+<p>将上面copy stack丢到google里面:</p>
+
+<p>org.codehaus.plexus.component.configurator.BasicComponentConfigurator <br>
+或者: <br>
+org.codehaus.plexus.component.configurator.BasicComponentConfigurator site:github.com <br>
+还可以这么搜源代码: <br>
+org.codehaus.plexus.component.configurator site:github.com <br>
+锁定到这里: <br>
+<a href="https://github.com/eclipse/sisu.plexus/blob/master/org.eclipse.sisu.plexus/src/org/codehaus/plexus/component/configurator/BasicComponentConfigurator.java"></a><a href="https://github.com/eclipse/sisu.plexus/blob/master/org.eclipse.sisu.plexus/src/org/codehaus/plexus/component/configurator/BasicComponentConfigurator.java">https://github.com/eclipse/sisu.plexus/blob/master/org.eclipse.sisu.plexus/src/org/codehaus/plexus/component/configurator/BasicComponentConfigurator.java</a> <br>
+<img src="github高级使用_files/46648872.png"></p>
+
+<p>IDE里面的不正确的源代码: <br>
+<img src="github高级使用_files/46965622.png"></p>
+
+<h3 id="下面需要引入正确的代码了!!重点">下面需要引入正确的代码了!!(重点)</h3>
+
+<p>只需要在pom.xml里面写dependency; <br>
+切换到0.3.3版本:</p>
+
+<p><img src="github高级使用_files/47348881.png"> <br>
+发现是对 的:(说明0.3.3这个版本可以使用！！！) <br>
+<img src="github高级使用_files/47262187.png"> <br>
+google: sisu.plexus 0.3.3 maven <br>
+<img src="github高级使用_files/47450106.png"></p>
+
+<p>发现此时还是不对: <br>
+<img src="github高级使用_files/47519840.png"></p>
+
+<p>下面解决包冲突:(我们希望下面这个不对的代码被我们刚刚引入的包覆盖掉!!!) <br>
+<img src="github高级使用_files/47566043.png"></p>
+
+<p>发现原来不对的的代码还在:(我们想要把这个不对的删掉！！！) <br>
+<img src="github高级使用_files/47748124.png"></p>
+
+<p>现在最关键的是需要找到这个不好的代码是谁导入进来的!</p>
+
+<div id="wiz_cm_1590744610564_5194" class="wiz-code-container" contenteditable="false" data-mode="JavaScript" data-theme="default"><textarea readonly="" style="display:none;">$mvn dependency:tree &gt; d.txt</textarea><wiz_code_mirror><div class="CodeMirror cm-s-default" data-id="wiz_cm_1590744610564_5194"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 20px; left: 34px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0" readonly=""></textarea></div><div class=" wiz-hide wiz_CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class=" wiz-hide wiz_CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: 0px; border-right-width: 30px; min-height: 32px; min-width: 228px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class=" wiz-hide wiz_CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">$mvn</span> <span class="cm-variable">dependency</span>:<span class="cm-variable">tree</span> <span class="cm-operator">&gt;</span> <span class="cm-variable">d</span>.<span class="cm-property">txt</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 32px;"></div><div class="CodeMirror-gutters" style="height: 62px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></wiz_code_mirror></div>
+
+<p><img src="github高级使用_files/48258874.png"> <br>
+所以要做<code>org.apache.maven:maven-plugin-api:jar:3.0:compile</code>这个依赖里面将 <br>
+<code>org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:compile</code>排除！！！ <br>
+发现原来的坏代码终于没了; <br>
+<img src="github高级使用_files/48555234.png"></p>
+
+<p>再次回到项目里面:重复之前的操作(注意:这里是在项目里面,不是写插件的那个项目,是用这个插件的项目?) <br>
+<img src="github高级使用_files/48764637.png"></p>
+
+<p>现在恢复正常了: <br>
+<img src="github高级使用_files/48905060.png"></p>
+
+<h1 id="查找任意感兴趣的代码重要">查找任意感兴趣的代码(重要)</h1>
+
+<p>我在调试⼀份代码,但是这份代码不不知道从哪里来的 <br>
+确定类名  <br>
+寻找对应的GitHub仓库  <br>
+浏览源代码版本,确定正在使⽤的版本</p>
+
+<h2 id="看前面的一个例子:">看前面的一个例子:</h2>
+
+<p><img src="github高级使用_files/56446440.png"> <br>
+报错了: <br>
+<img src="github高级使用_files/56489240.png"></p>
+
+<p>看到丢出异常了: <br>
+<img src="github高级使用_files/56590313.png"></p>
+
+<h3 id="看到的每一个异常类都可以在github上面找到源代码:">看到的每一个异常类都可以在github上面找到源代码:</h3>
+
+<p><img src="github高级使用_files/56650443.png"></p>
+
+<p>google搜索: <br>
+org.apache.xxx.yyy site;github.com  <br>
+<img src="github高级使用_files/56696370.png"></p>
+
+<p><img src="github高级使用_files/56760181.png"></p>
+
+<p>于是乎可以将maven仓库下载下来: <br>
+<img src="github高级使用_files/56803999.png"></p>
+
+<p>现在问题来了: <br>
+出错的这个版本是你下载下来的那个版本呢?? ===&gt;(3.6.1鸭,刚刚运行的时候就是用的3.6.1版本) <br>
+<img src="github高级使用_files/56851507.png"> <br>
+现在需要切换到3.6.1版本看它发生了什么问题导致报了上面这么一个错!</p>
+
+<p><img src="github高级使用_files/57025880.png"> 下面打开这个类的215行: <br>
+<img src="github高级使用_files/57088346.png"></p>
+
+<p><img src="github高级使用_files/57126212.png"></p>
+
+<p>打个断点: <br>
+<img src="github高级使用_files/57167224.png"></p>
+
+<p>和前面那个例子,去调试:(这里就不展开讲调试了) <br>
+<img src="github高级使用_files/57245158.png"></p>
+
+<h3 id="要想知道下面这个类是哪儿来？看下面:">要想知道下面这个类是哪儿来？看下面:</h3>
+
+<p>方法同前google搜索类名+site:github.com <br>
+<img src="github高级使用_files/57367110.png"></p>
+
+<p><img src="github高级使用_files/57453839.png"></p>
+
+<p>此时 说明版本对不上号!! <br>
+怎么找到一个正确的版本号呢? <br>
+这里介绍一种方法: <br>
+由于你这里报错的类是maven的依赖,故这里应该在maven-3.6.1的lib文件里面去找: <br>
+<img src="github高级使用_files/57652807.png"> <br>
+找到本地的plexus-classworlds这个库的对应版本而后在github上将其切换至对应的版本即可; <br>
+<img src="github高级使用_files/57722199.png"></p>
+
+<h3 id="想要调试直接丢出来的一个异常">想要调试直接丢出来 的一个异常</h3>
+
+<p><img src="github高级使用_files/57882109.png"> <br>
+方法和前面一模一样: <br>
+先搜到源代码; <br>
+<img src="github高级使用_files/58087938.png"></p>
+
+<p><img src="github高级使用_files/58138727.png"></p>
+
+<p>clone到本地,而后打开它: <br>
+<img src="github高级使用_files/58261443.png"> <br>
+下面问题来了:怎么找到报错的那个代码的正确版本? <br>
+解决办法:查看出错的那个项目的pom.xml(直接丢出错误的这个类其实是这个出错的项目所依赖的一个库里面的一个类,pom在引用的时候肯定标注了其版本!!!) <br>
+<img src="github高级使用_files/58480814.png"> <br>
+发现是1.3.0版本; <br>
+<img src="github高级使用_files/58671255.png"> <br>
+切换到1.3.0版本: <br>
+<img src="github高级使用_files/58734039.png"> <br>
+而后切换到下面这个类的111行附近,打断点debug: <br>
+<img src="github高级使用_files/58814605.png"> <br>
+注意:打断点的地方是依赖库这个项目,不是出问题的那个项目; <br>
+<img src="github高级使用_files/58971302.png"> <br>
+在出错的项目里面debug: <br>
+<img src="github高级使用_files/59023807.png"> <br>
+在依赖库这个项目里面设置端口: <br>
+<img src="github高级使用_files/59084150.png"> <br>
+在依赖库这个项目里面开启调试:(可以看到即使爆红也可以进行调试,哈哈) <br>
+<img src="github高级使用_files/59206380.png"></p>
+
+<h2 id="小结上面的两个例子调试逻辑总结">小结(上面的两个例子调试逻辑总结)</h2>
+
+<p>一般是在出错的项目里面运行<code>mvn xxx</code>等调试命令,在依赖库项目里面打断点,并且运行调试！！！</p>
+
+<h2 id="确定jvm里面运行的任何代码的正确版本">确定jvm里面运行的任何代码的正确版本</h2>
+
+<p>问题:不知道这个类是从哪里来的,他的版本号是什么?? <br>
+<img src="github高级使用_files/60136235.png"> <br>
+解决方案: <br>
+首先需要确保让你的jvm停在一个地方; <br>
+随便找了一个方便的地方?? <br>
+<img src="github高级使用_files/60452193.png"> <br>
+运行mvndebug: <br>
+<img src="github高级使用_files/60498933.png"> <br>
+<img src="github高级使用_files/60552331.png"></p>
+
+<p>停在了这个下断点的地方: <br>
+<img src="github高级使用_files/60615373.png"></p>
+
+<h3 id="方案1来了:">方案1来了:</h3>
+
+<p><img src="github高级使用_files/60639340.png"> <br>
+强行加载你想要知道的那个类!!! <br>
+<img src="github高级使用_files/60341317.png"> <br>
+<img src="github高级使用_files/60691687.png"> <br>
+github上面发现没有找到对应的版本;就找一个版本最接近的: <br>
+<img src="github高级使用_files/60777880.png"></p>
+
+<p>其实人家已经有提示了:(移到其他地方了 ) <br>
+<img src="github高级使用_files/60810549.png"> <br>
+<img src="github高级使用_files/60854523.png"></p>
+
+<h3 id="方案2:">方案2:</h3>
+
+<p><img src="github高级使用_files/60136235.png"> <br>
+接着方案1的表达式继续利用gitResource获取资源; <br>
+<code>Class.forName("xxx.yyy.zzz.qqq.www").getResource("xxx/yyy/zzz/qqq/www.class")</code> <br>
+<img src="github高级使用_files/60985220.png"></p>
+
+<p><img src="github高级使用_files/61075160.png"></p>
+
+<h1 id="在包冲突时检索正确版本的代码">在包冲突时检索正确版本的代码</h1>
+
+<p><img src="github高级使用_files/61275519.png"></p>
+
+<p>NoSuchMethodError说明有包冲突发生了! <br>
+<img src="github高级使用_files/61854408.png"></p>
+
+<p><img src="github高级使用_files/62007045.png"> <br>
+按照最近原则,c0.2被忽略;</p>
+
+<p>直接搜索报错的这个方法的类:(实在不行就去中央仓库) <br>
+<img src="github高级使用_files/62084068.png"></p>
+
+<p>找到c0.1和c0.2之间的区别:而后发现需要的是c0.2,实际上加载的是c0.1 <br>
+解决方案:(详见地20课) <br>
+将c0.1排除即可</p></body></html>
